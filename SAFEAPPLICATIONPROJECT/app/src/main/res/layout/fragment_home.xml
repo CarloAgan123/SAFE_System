@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:id="@+id/linearHome"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#98fb98"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:fontFamily="@font/inria_sans"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/welcomeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inria_sans"
+                android:layout_marginTop="20dp"
+                android:text="WELCOME"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearHome" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/welcomeImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/welcome_image"
+                android:adjustViewBounds="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/welcomeLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:shapeAppearanceOverlay="@style/CustomShapeAppearance"
+                />
+
+            <TextView
+                android:id="@+id/quote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/quote"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/inria_sans"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcomeImage"/>
+
+
+            <LinearLayout
+                android:id="@+id/linearImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/quote"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image1"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/image_one"
+                    android:layout_weight=".5"
+                    android:adjustViewBounds="true"
+                    app:shapeAppearance="@style/CustomShapeAppearance"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image2"
+                    android:layout_width="200dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="200dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/image_two"
+                    android:layout_weight=".5"
+                    android:adjustViewBounds="true"
+                    app:shapeAppearance="@style/CustomShapeAppearance"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearImages2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearImages"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image3"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/image_three"
+                    android:layout_weight=".5"
+                    android:adjustViewBounds="true"
+                    app:shapeAppearance="@style/CustomShapeAppearance"
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image4"
+                    android:layout_width="200dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="200dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/image_four"
+                    android:layout_weight=".5"
+                    android:adjustViewBounds="true"
+                    app:shapeAppearance="@style/CustomShapeAppearance"/>
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

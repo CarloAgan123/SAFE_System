@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:id="@+id/headerSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#98fb98"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:fontFamily="@font/inria_sans"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Emergency Contacts"
+            android:textColor="#1C160C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Contact Item 1 -->
+    <LinearLayout
+        android:id="@+id/contactItem1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#F4EFE6"
+        app:layout_constraintTop_toBottomOf="@id/headerSection">
+
+        <ImageView
+            android:id="@+id/shieldIcon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/ic_guard"
+            android:background="@drawable/rounded_background" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/securityPersonnelLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Security personnel"
+                android:textColor="#1C160C"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/securityPersonnelContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact number"
+                android:textColor="#A18249"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09123456789"
+            android:textColor="#1C160C" />
+    </LinearLayout>
+
+    <!-- Contact Item 2 (Ambulance) -->
+    <LinearLayout
+        android:id="@+id/contactItem2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/contactItem1">
+
+        <ImageView
+            android:id="@+id/firstAidIcon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/ic_ambulance"
+            android:background="@drawable/rounded_background" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/ambulanceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ambulance"
+                android:textColor="#1C160C"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ambulanceContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Service"
+                android:textColor="#A18249"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09123456789"
+            android:textColor="#1C160C" />
+    </LinearLayout>
+
+    <!-- Additional Contact Items... -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
